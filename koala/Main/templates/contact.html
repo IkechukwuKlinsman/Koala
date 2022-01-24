@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Contact Us
+{% endblock title %}
+
+
+{% block body %}
+        <div class="social">
+            <a href="https://web.facebook.com">Facebook</a>
+            <a href="https://www.instagram.com">Instagram</a>
+            <a href="https://www.linkedin.com">LinkedIn</a>
+            <a href="https://www.twitter.com">Twitter</a>
+        </div>
+
+    <form action='.' method='post'>
+        {%csrf_token %}
+        <div>
+            <label for='name'>Name:</label>
+            <input type="text" id='name' name='Name' placeholder="Enter First name here" required> 
+        </div>
+        <br>
+        {% comment %} <div>
+            <label for= 'last name'>Last name:</label>
+            <input type="text" id= placeholder="Enter Last name here" required> 
+        </div>
+        <br> {% endcomment %}
+        <div>
+            <label for='email'>Email:</label>
+            <input type="email" id='email' name='E-mail' placeholder="Enter email name here" required> 
+        </div>
+        <br>
+        <div>
+            <label for=>Message:</label>
+            <input type="message" id='message' name='Password' placeholder="Enter password name here" required> 
+        </div>
+        <br>
+        {% comment %} <div>
+            <label>Message:</label>
+            <textarea placehoder="Enter message"
+            ></textarea>
+        </div> {% endcomment %}
+                {% comment %} <br> {% endcomment %}
+        <div>
+            {% comment %} <label for="check">Check:</label>
+            <input type="radio" id="check" name="check" />
+            <input type="radio" id="check" name="check"
+            ></textarea> {% endcomment %}
+            <input type="radio" name="gender" id="male"> 
+             <label for="male">Male</label>
+    
+            <input type="radio" name="gender" id="female"> 
+            <label for="female">Female</label>
+            <input type="radio" name="gender" id="female"> 
+            <label for="female">Others</label>
+
+        </div>
+
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+
+{% endblock body %}
